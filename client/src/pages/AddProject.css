@@ -1,0 +1,253 @@
+.add-project-page {
+  min-height: 100vh;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.form-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.project-form {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #ecf0f1;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form-section legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-lg {
+  padding: 14px 40px;
+  font-size: 1.05rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  background-color: #fadbd8;
+  color: #922b21;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e74c3c;
+}
+
+.success {
+  background-color: #d5f4e6;
+  color: #1e8449;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #27ae60;
+}
+
+/* Sidebar Tips */
+.form-tips {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.form-tips h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f39c12;
+}
+
+.form-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.form-tips li {
+  padding: 10px 0;
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.form-tips li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-tips {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-lg {
+    flex: none;
+    width: 100%;
+  }
+
+  .project-form {
+    padding: 20px;
+  }
+
+  .form-tips {
+    padding: 20px;
+  }
+}
